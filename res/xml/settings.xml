@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        app:key="@string/pref_key_enabled"
+        app:title="@string/setting_enabled_title"
+        app:summary="@string/setting_enabled_summary"
+        app:defaultValue="@bool/default_enabled" />
+
+    <com.android.settings.widget.LabeledSeekBarPreference
+        app:key="@string/pref_key_sensitivity"
+        app:title="@string/setting_sensitivity_title"
+        app:textStart="@string/setting_sensitivity_firm"
+        app:textEnd="@string/setting_sensitivity_light"
+        app:min="0"
+        android:max="10"
+        app:seekBarIncrement="1"
+        app:selectable="true"
+        app:dependency="@string/pref_key_enabled" />
+
+    <ListPreference
+        app:key="@string/pref_key_action"
+        app:title="@string/setting_action_title"
+        app:entries="@array/action_names"
+        app:entryValues="@array/action_values"
+        app:defaultValue="@string/default_action"
+        app:dependency="@string/pref_key_enabled" />
+
+    <SwitchPreference
+        app:key="@string/pref_key_allow_screen_off"
+        app:title="@string/setting_screen_off_title"
+        app:summary="@string/setting_screen_off_summary"
+        app:defaultValue="@bool/default_allow_screen_off"
+        app:dependency="@string/pref_key_enabled" />
+
+</PreferenceScreen>
