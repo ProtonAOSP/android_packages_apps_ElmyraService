@@ -24,6 +24,7 @@ import androidx.preference.ListPreference
 import androidx.preference.SwitchPreference
 
 import org.protonaosp.elmyra.getDePrefs
+import org.protonaosp.elmyra.PREFS_NAME
 
 // We need to use the "deprecated" PreferenceFragment to match Settings UI
 @Suppress("DEPRECATION")
@@ -36,6 +37,8 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        preferenceManager.setStorageDeviceProtected()
+        preferenceManager.sharedPreferencesName = PREFS_NAME
 
         prefs = context.getDePrefs()
         prefs.registerOnSharedPreferenceChangeListener(this)

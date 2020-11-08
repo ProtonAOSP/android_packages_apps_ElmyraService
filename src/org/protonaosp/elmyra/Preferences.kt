@@ -18,8 +18,10 @@ package org.protonaosp.elmyra
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.preference.PreferenceManager
+
+const val PREFS_NAME = "elmyra_preferences"
 
 fun Context.getDePrefs(): SharedPreferences {
-    return PreferenceManager.getDefaultSharedPreferences(this)
+    return createDeviceProtectedStorageContext()
+            .getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 }
