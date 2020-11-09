@@ -22,11 +22,13 @@ import androidx.preference.PreferenceFragment
 import androidx.preference.PreferenceManager
 import androidx.preference.ListPreference
 import androidx.preference.SwitchPreference
+import com.android.settings.widget.LabeledSeekBarPreference
 
 import org.protonaosp.elmyra.getDePrefs
 import org.protonaosp.elmyra.PREFS_NAME
 
 // We need to use the "deprecated" PreferenceFragment to match Settings UI
+// AppCompat won't fully match the native device default settings theme
 @Suppress("DEPRECATION")
 class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var prefs: SharedPreferences
@@ -55,14 +57,20 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
     }
 
     private fun updateUi() {
+        // Sensitivity value
+        val sens = prefs.getInt(getString(R.string.pref_key_sensitivity),
+                resources.getInteger(R.integer.default_sensitivity))
+        findPreference<LabeledSeekBarPreference>(getString(R.string.pref_key_sensitivity))?.setProgress(sens)
+
+        // Action summary
         val actionNames = resources.getStringArray(R.array.action_names)
         val actionValues = resources.getStringArray(R.array.action_values)
-
         val actionValue = prefs.getString(getString(R.string.pref_key_action),
                 getString(R.string.default_action))
         val actionName = actionNames[actionValues.indexOf(actionValue)]
         findPreference<ListPreference>(getString(R.string.pref_key_action))?.setSummary(actionName)
 
+        // Screen state based on action
         val screenPref = findPreference<SwitchPreference>(getString(R.string.pref_key_allow_screen_off))
         val screenForced = prefs.getBoolean(getString(R.string.pref_key_allow_screen_off_action_forced), false)
         screenPref?.setEnabled(!screenForced)
