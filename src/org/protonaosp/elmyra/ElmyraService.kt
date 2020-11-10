@@ -202,8 +202,6 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
             vibrator.vibrate(vibEdgeRelease)
             action.run()
             inGesture = false
-        } else {
-            //vibrator.vibrate(vibReject)
         }
     }
 
