@@ -17,16 +17,21 @@
 <resources>
     <string name="app_name">Active Edge Service</string>
 
+    <!-- Pref keys -->
     <string name="pref_key_enabled" translatable="false">enabled</string>
     <string name="pref_key_sensitivity" translatable="false">sensitivity</string>
     <string name="pref_key_action" translatable="false">action</string>
     <string name="pref_key_allow_screen_off" translatable="false">allow_screen_off</string>
     <string name="pref_key_allow_screen_off_action_forced" translatable="false">allow_screen_off_action_forced</string>
 
+    <!-- Other non-translatable -->
     <string name="summary_placeholder" translatable="false">&#160;</string>
 
+    <!-- Entry points in Settings -->
     <string name="settings_entry_title">Active Edge</string>
     <string name="settings_entry_summary">Squeeze phone</string>
+
+    <!-- Items in Active Edge gesture settings -->
     <string name="setting_enabled_title">Squeeze phone to perform action</string>
     <string name="setting_enabled_summary">Squeeze and release the sides of your phone near the bottom to perform an action</string>
     <string name="setting_sensitivity_title">Sensitivity</string>
@@ -34,9 +39,9 @@
     <string name="setting_sensitivity_firm">Firm squeeze</string>
     <string name="setting_screen_off_title">Allow when screen is off</string>
     <string name="setting_screen_off_summary">May increase false triggers</string>
-
     <string name="setting_action_title">On squeeze</string>
 
+    <!-- Actions -->
     <string name="action_screenshot_name">Take screenshot</string>
     <string name="action_assistant_name">Open assistant</string>
     <string name="action_camera_name">Open camera</string>
@@ -45,6 +50,7 @@
     <string name="action_flashlight_name">Turn flashlight on/off</string>
     <string name="action_screen_name">Turn screen on/off</string>
 
+    <!-- Actions meta -->
     <string-array name="action_values" translatable="false">
         <item>screenshot</item>
         <item>assistant</item>
@@ -54,7 +60,6 @@
         <item>flashlight</item>
         <item>screen</item>
     </string-array>
-
     <string-array name="action_names" translatable="false">
         <item>@string/action_screenshot_name</item>
         <item>@string/action_assistant_name</item>
