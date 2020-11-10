@@ -24,6 +24,7 @@
     <string name="pref_key_allow_screen_off_action_forced" translatable="false">allow_screen_off_action_forced</string>
 
     <string name="summary_placeholder" translatable="false">&#160;</string>
+
     <string name="settings_entry_title">Active Edge</string>
     <string name="settings_entry_summary">Squeeze phone</string>
     <string name="setting_enabled_title">Squeeze phone to perform action</string>
@@ -44,7 +45,7 @@
     <string name="action_flashlight_name">Turn flashlight on/off</string>
     <string name="action_screen_name">Turn screen on/off</string>
 
-    <string-array name="action_values">
+    <string-array name="action_values" translatable="false">
         <item>screenshot</item>
         <item>assistant</item>
         <item>camera</item>
@@ -54,7 +55,7 @@
         <item>screen</item>
     </string-array>
 
-    <string-array name="action_names">
+    <string-array name="action_names" translatable="false">
         <item>@string/action_screenshot_name</item>
         <item>@string/action_assistant_name</item>
         <item>@string/action_camera_name</item>
