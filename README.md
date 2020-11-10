@@ -2,7 +2,7 @@
 
 This is an open-source implementation of the Pixel Active Edge gesture, written from scratch for portability and customizability.
 
-Active Edge, codename Elmyra, is a gesture powered by side grip sensors on the Pixel 2/XL, 3/XL, 3a/XL, and 4/XL that is used to activate the Google Assistant on stock. The gesture is handled by a proprietary nanoapp running under CHRE (ContextHub Runtime Environment) on the sensors DSP.
+Active Edge, codename Elmyra, is a gesture powered by side grip sensors on the Pixel 2/XL, 3/XL, 3a/XL, and 4/XL that is used to activate the Google Assistant on stock. The gesture is handled by a proprietary nanoapp running under CHRE (ContextHub Runtime Environment) on the sensor DSP.
 
 This app is a reverse-engineered Android client that runs as a standalone service and talks to the CHRE nanoapp for gesture functionality. No decompiled code has been used.
 
