@@ -42,7 +42,7 @@ class MuteAction(context: Context) : Action(context) {
                 ringerMode = AudioManager.RINGER_MODE_VIBRATE
                 toastText = com.android.internal.R.string.volume_dialog_ringer_guidance_vibrate
             }
-            // VOLUME_HUSH_MUTE, VOLUME_HUSH_OFF
+            // VOLUME_HUSH_MUTE and VOLUME_HUSH_OFF
             else -> {
                 ringerMode = AudioManager.RINGER_MODE_SILENT
                 toastText = com.android.internal.R.string.volume_dialog_ringer_guidance_silent
