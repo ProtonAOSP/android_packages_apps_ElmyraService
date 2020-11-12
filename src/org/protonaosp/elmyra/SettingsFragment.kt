@@ -58,30 +58,33 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
 
     private fun updateUi() {
         // Sensitivity value
-        val sens = prefs.getInt(getString(R.string.pref_key_sensitivity),
-                resources.getInteger(R.integer.default_sensitivity))
-        findPreference<LabeledSeekBarPreference>(getString(R.string.pref_key_sensitivity))?.setProgress(sens)
+        findPreference<LabeledSeekBarPreference>(getString(R.string.pref_key_sensitivity))?.apply {
+            progress = prefs.getInt(getString(R.string.pref_key_sensitivity),
+                    resources.getInteger(R.integer.default_sensitivity))
+        }
 
-        // Action summary
-        val actionNames = resources.getStringArray(R.array.action_names)
-        val actionValues = resources.getStringArray(R.array.action_values)
-        val actionValue = prefs.getString(getString(R.string.pref_key_action),
-                getString(R.string.default_action))
-        val actionName = actionNames[actionValues.indexOf(actionValue)]
-        findPreference<ListPreference>(getString(R.string.pref_key_action))?.setSummary(actionName)
+        // Action value and summary
+        findPreference<ListPreference>(getString(R.string.pref_key_action))?.apply {
+            val actionNames = resources.getStringArray(R.array.action_names)
+            val actionValues = resources.getStringArray(R.array.action_values)
+
+            value = prefs.getString(getString(R.string.pref_key_action),
+                    getString(R.string.default_action))
+            summary = actionNames[actionValues.indexOf(value)]
+        }
 
         // Screen state based on action
-        val screenPref = findPreference<SwitchPreference>(getString(R.string.pref_key_allow_screen_off))
-        val screenForced = prefs.getBoolean(getString(R.string.pref_key_allow_screen_off_action_forced), false)
-        screenPref?.setEnabled(!screenForced)
-        if (screenForced) {
-            screenPref?.setPersistent(false)
-            screenPref?.setChecked(false)
-        } else {
-            val prefChecked = prefs.getBoolean(getString(R.string.pref_key_allow_screen_off),
-                    resources.getBoolean(R.bool.default_allow_screen_off))
-            screenPref?.setChecked(prefChecked)
-            screenPref?.setPersistent(true)
+        findPreference<SwitchPreference>(getString(R.string.pref_key_allow_screen_off))?.apply {
+            val screenForced = prefs.getBoolean(getString(R.string.pref_key_allow_screen_off_action_forced), false)
+            setEnabled(!screenForced)
+            if (screenForced) {
+                setPersistent(false)
+                setChecked(false)
+            } else {
+                setPersistent(true)
+                setChecked(prefs.getBoolean(getString(R.string.pref_key_allow_screen_off),
+                        resources.getBoolean(R.bool.default_allow_screen_off)))
+            }
         }
     }
 }
