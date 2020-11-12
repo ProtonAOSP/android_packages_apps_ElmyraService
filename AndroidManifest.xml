@@ -32,8 +32,8 @@
 
     <!-- Sensor HAL checks for this -->
     <permission android:name="com.google.sensor.elmyra.permission.USE_RAW_SENSOR"
-        android:protectionLevel="preinstalled|signature"/>
-    <uses-permission android:name="com.google.sensor.elmyra.permission.USE_RAW_SENSOR"/>
+        android:protectionLevel="preinstalled|signature" />
+    <uses-permission android:name="com.google.sensor.elmyra.permission.USE_RAW_SENSOR" />
 
     <application
         android:label="@string/app_name"
@@ -62,29 +62,29 @@
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
 
-            <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE" android:value="true"/>
+            <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE" android:value="true" />
         </service>
 
         <activity android:name=".SettingsActivity"
             android:label="@string/settings_entry_title"
             android:description="@string/settings_entry_title"
             android:theme="@style/Theme.Settings"
-            android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
 
-            <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.gestures"/>
-            <meta-data android:name="com.android.settings.summary" android:resource="@string/settings_entry_summary"/>
-            <meta-data android:name="com.android.settings.order" android:value="-100"/>
+            <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.gestures" />
+            <meta-data android:name="com.android.settings.summary" android:resource="@string/settings_entry_summary" />
+            <!-- To make it appear at the top, like stock -->
+            <meta-data android:name="com.android.settings.order" android:value="-100" />
         </activity>
 
     </application>
