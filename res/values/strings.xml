@@ -33,7 +33,7 @@
 
     <!-- Items in Active Edge gesture settings -->
     <string name="setting_enabled_title">Squeeze phone to perform action</string>
-    <string name="setting_enabled_summary">Squeeze and release the sides of your phone near the bottom to perform an action</string>
+    <string name="setting_enabled_summary">To perform an action, squeeze and release the sides of your phone near the bottom</string>
     <string name="setting_sensitivity_title">Sensitivity</string>
     <string name="setting_sensitivity_light">Light squeeze</string>
     <string name="setting_sensitivity_firm">Firm squeeze</string>
