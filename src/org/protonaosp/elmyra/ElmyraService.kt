@@ -258,12 +258,12 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
             if (enabled) {
                 when (intent?.action) {
                     Intent.ACTION_SCREEN_ON -> {
-                        Log.i(TAG, "Screen turned on, enabling gesture")
+                        Log.i(TAG, "Enabling gesture due to screen on")
                         enableGesture()
                     }
                     // Disable gesture entirely to save power
                     Intent.ACTION_SCREEN_OFF -> {
-                        Log.i(TAG, "Screen turned off, disabling gesture")
+                        Log.i(TAG, "Disabling gesture due to screen off")
                         disableGesture()
                     }
                 }
