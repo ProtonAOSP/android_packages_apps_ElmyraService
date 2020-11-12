@@ -30,6 +30,7 @@
     <!-- Entry points in Settings -->
     <string name="settings_entry_title">Active Edge</string>
     <string name="settings_entry_summary">Squeeze phone</string>
+    <string name="settings_search_keywords">Active Edge, squeeze, edge, gesture, assist, assistant</string>
 
     <!-- Items in Active Edge gesture settings -->
     <string name="setting_enabled_title">Squeeze phone to perform action</string>

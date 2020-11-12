@@ -9,6 +9,7 @@ This app is a reverse-engineered Android client that runs as a standalone servic
 ## Features
 
 - Seamless integration in Settings → System → Gestures → Active Edge with no extra changes
+- Integration with Settings search
 - Many actions to perform on gesture trigger
   - Take screenshot
   - Open assistant

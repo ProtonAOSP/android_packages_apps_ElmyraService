@@ -91,6 +91,18 @@
             <meta-data android:name="com.android.settings.order" android:value="-100" />
         </activity>
 
+        <provider
+            android:name=".SearchProvider"
+            android:authorities="org.protonaosp.elmyra.settings_search"
+            android:multiprocess="false"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+            </intent-filter>
+        </provider>
+
     </application>
 
 </manifest>
