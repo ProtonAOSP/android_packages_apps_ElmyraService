@@ -15,8 +15,12 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Entry points in Settings -->
     <string name="settings_entry_title">Active Edge</string>
     <string name="settings_entry_summary">Gerät zusammendrücken</string>
+    <string name="settings_search_keywords">Active Edge, Zusammendrücken, Rand, Geste, Assistent</string>
+
+    <!-- Items in Active Edge gesture settings -->
     <string name="setting_enabled_title">Gerät zusammendrücken, um eine Aktion auszulösen</string>
     <string name="setting_enabled_summary">Untere Hälfte des Geräts kurz zusammendrücken und loslassen, um eine Aktion auszulösen</string>
     <string name="setting_sensitivity_title">Druckstärke</string>
@@ -24,9 +28,9 @@
     <string name="setting_sensitivity_firm">Stark drücken</string>
     <string name="setting_screen_off_title">Bei deaktiviertem Bildschirm zulassen</string>
     <string name="setting_screen_off_summary">Kann zu Fehlauslösungen führen</string>
-
     <string name="setting_action_title">Beim Zusammendrücken</string>
 
+    <!-- Actions -->
     <string name="action_screenshot_name">Screenshot erstellen</string>
     <string name="action_assistant_name">Assistant öffnen</string>
     <string name="action_camera_name">Kamera öffnen</string>
