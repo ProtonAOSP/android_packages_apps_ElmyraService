@@ -13,10 +13,12 @@ message RecognizerStart {
 }
 
 message SensitivityUpdate {
+    // Gesture trigger sensitivty (1.0 scale)
     float sensitivity = 1;
 }
 
 message GestureProgress {
+    // Progress towards finished gesture (GestureDetected event), 0.0-1.0
     float progress = 1;
 }
 
@@ -27,8 +29,12 @@ message GestureDetected {
 
 enum MessageType {
     UNDEFINED = 0;
+
+    // From AP HALs
     NANOAPP_LOADED = 1;
     NANOAPP_CONFIG = 100;
+
+    // AP -> SLPI
     RECOGNIZER_START = 200;
     RECOGNIZER_STOP = 201;
     SENSITIVITY_UPDATE = 202;
@@ -36,6 +42,8 @@ enum MessageType {
     CHASSIS_REQUEST = 204;
     GRAB_RECOGNIZER_START = 205;
     GRAB_RECOGNIZER_STOP = 206;
+
+    // SLPI -> AP
     GESTURE_PROGRESS = 300;
     GESTURE_DETECTED = 301;
     SNAPSHOT_RESPONSE = 302;
