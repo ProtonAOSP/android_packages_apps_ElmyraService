@@ -27,10 +27,11 @@ import com.android.settings.widget.LabeledSeekBarPreference
 import org.protonaosp.elmyra.R
 import org.protonaosp.elmyra.getDePrefs
 import org.protonaosp.elmyra.PREFS_NAME
+import org.protonaosp.elmyra.getEnabled
 import org.protonaosp.elmyra.getSensitivity
 import org.protonaosp.elmyra.getAction
-import org.protonaosp.elmyra.getAllowScreenOff
 import org.protonaosp.elmyra.getActionName
+import org.protonaosp.elmyra.getAllowScreenOff
 
 // We need to use the "deprecated" PreferenceFragment to match Settings UI
 // AppCompat won't fully match the native device default settings theme
@@ -62,6 +63,11 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
     }
 
     private fun updateUi() {
+        // Enabled
+        findPreference<SwitchPreference>(getString(R.string.pref_key_enabled))?.apply {
+            setChecked(prefs.getEnabled(context))
+        }
+
         // Sensitivity value
         findPreference<LabeledSeekBarPreference>(getString(R.string.pref_key_sensitivity))?.apply {
             progress = prefs.getSensitivity(context)
