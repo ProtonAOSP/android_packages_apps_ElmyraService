@@ -27,6 +27,10 @@ import com.android.settings.widget.LabeledSeekBarPreference
 import org.protonaosp.elmyra.R
 import org.protonaosp.elmyra.getDePrefs
 import org.protonaosp.elmyra.PREFS_NAME
+import org.protonaosp.elmyra.getSensitivity
+import org.protonaosp.elmyra.getAction
+import org.protonaosp.elmyra.getAllowScreenOff
+import org.protonaosp.elmyra.getActionName
 
 // We need to use the "deprecated" PreferenceFragment to match Settings UI
 // AppCompat won't fully match the native device default settings theme
@@ -60,18 +64,13 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
     private fun updateUi() {
         // Sensitivity value
         findPreference<LabeledSeekBarPreference>(getString(R.string.pref_key_sensitivity))?.apply {
-            progress = prefs.getInt(getString(R.string.pref_key_sensitivity),
-                    resources.getInteger(R.integer.default_sensitivity))
+            progress = prefs.getSensitivity(context)
         }
 
         // Action value and summary
         findPreference<ListPreference>(getString(R.string.pref_key_action))?.apply {
-            val actionNames = resources.getStringArray(R.array.action_names)
-            val actionValues = resources.getStringArray(R.array.action_values)
-
-            value = prefs.getString(getString(R.string.pref_key_action),
-                    getString(R.string.default_action))
-            summary = actionNames[actionValues.indexOf(value)]
+            value = prefs.getAction(context)
+            summary = prefs.getActionName(context)
         }
 
         // Screen state based on action
@@ -83,8 +82,7 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
                 setChecked(false)
             } else {
                 setPersistent(true)
-                setChecked(prefs.getBoolean(getString(R.string.pref_key_allow_screen_off),
-                        resources.getBoolean(R.bool.default_allow_screen_off)))
+                setChecked(prefs.getAllowScreenOff(context))
             }
         }
     }

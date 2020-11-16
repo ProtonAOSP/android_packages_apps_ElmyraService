@@ -38,6 +38,10 @@ import org.protonaosp.elmyra.actions.*
 import org.protonaosp.elmyra.proto.nano.ContextHubMessages
 import org.protonaosp.elmyra.TAG
 import org.protonaosp.elmyra.getDePrefs
+import org.protonaosp.elmyra.getAction
+import org.protonaosp.elmyra.getSensitivity
+import org.protonaosp.elmyra.getEnabled
+import org.protonaosp.elmyra.getAllowScreenOff
 
 private const val NANOAPP_ID = 0x476f6f676c00100eL
 private const val REJECT_COOLDOWN_TIME = 1000 // ms
@@ -104,14 +108,12 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
     }
 
     private fun updateSensitivity() {
-        sensitivity = prefs.getInt(getString(R.string.pref_key_sensitivity),
-                resources.getInteger(R.integer.default_sensitivity)) / 10f
+        sensitivity = prefs.getSensitivity(this) / 10f
         Log.i(TAG, "Setting sensitivity to $sensitivity")
     }
 
     private fun updateAction() {
-        val key = prefs.getString(getString(R.string.pref_key_action),
-                getString(R.string.default_action))
+        val key = prefs.getAction(this)
         Log.i(TAG, "Setting action to $key")
         action = createAction(key)
 
@@ -121,8 +123,7 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
     }
 
     private fun updateEnabled() {
-        enabled = prefs.getBoolean(getString(R.string.pref_key_enabled),
-                resources.getBoolean(R.bool.default_enabled))
+        enabled = prefs.getEnabled(this)
         if (enabled) {
             Log.i(TAG, "Enabling gesture by pref")
             enableGesture()
@@ -133,8 +134,7 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
     }
 
     private fun updateScreenCallback() {
-        val allowScreenOff = prefs.getBoolean(getString(R.string.pref_key_allow_screen_off),
-                resources.getBoolean(R.bool.default_allow_screen_off))
+        val allowScreenOff = prefs.getAllowScreenOff(this)
 
         // Listen if either condition *can't* run when screen is off
         if (!allowScreenOff || !action.canRunWhenScreenOff()) {
