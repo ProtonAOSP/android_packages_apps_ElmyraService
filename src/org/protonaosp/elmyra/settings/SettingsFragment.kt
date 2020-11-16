@@ -78,9 +78,11 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
             val screenForced = prefs.getBoolean(getString(R.string.pref_key_allow_screen_off_action_forced), false)
             setEnabled(!screenForced)
             if (screenForced) {
+                setSummary(getString(R.string.setting_screen_off_blocked_summary))
                 setPersistent(false)
                 setChecked(false)
             } else {
+                setSummary(getString(R.string.setting_screen_off_summary))
                 setPersistent(true)
                 setChecked(prefs.getAllowScreenOff(context))
             }
