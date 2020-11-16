@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package org.protonaosp.elmyra
+package org.protonaosp.elmyra.settings
 
 import android.os.Bundle
 import android.content.SharedPreferences
@@ -24,6 +24,7 @@ import androidx.preference.ListPreference
 import androidx.preference.SwitchPreference
 import com.android.settings.widget.LabeledSeekBarPreference
 
+import org.protonaosp.elmyra.R
 import org.protonaosp.elmyra.getDePrefs
 import org.protonaosp.elmyra.PREFS_NAME
 

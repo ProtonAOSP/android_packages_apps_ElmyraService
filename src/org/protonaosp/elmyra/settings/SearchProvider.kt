@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package org.protonaosp.elmyra
+package org.protonaosp.elmyra.settings
 
 import android.content.Context
 import android.content.Intent
@@ -23,6 +23,8 @@ import android.database.Cursor
 import android.database.MatrixCursor
 import android.provider.SearchIndexablesProvider
 import android.provider.SearchIndexablesContract.*
+
+import org.protonaosp.elmyra.R
 
 class SearchProvider : SearchIndexablesProvider() {
     override fun onCreate() = true

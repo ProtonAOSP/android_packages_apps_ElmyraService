@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package org.protonaosp.elmyra
+package org.protonaosp.elmyra.settings
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -22,6 +22,7 @@ import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import androidx.preference.PreferenceManager
 
+import org.protonaosp.elmyra.R
 import org.protonaosp.elmyra.getDePrefs
 
 class ToggleTileService : TileService(), SharedPreferences.OnSharedPreferenceChangeListener {

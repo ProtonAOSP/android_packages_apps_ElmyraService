@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <fragment android:name="org.protonaosp.elmyra.SettingsFragment"
+    <fragment android:name="org.protonaosp.elmyra.settings.SettingsFragment"
         android:id="@+id/fragment"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>

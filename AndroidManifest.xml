@@ -56,7 +56,7 @@
 
         <!-- UI -->
 
-        <service android:name=".ToggleTileService"
+        <service android:name=".settings.ToggleTileService"
             android:label="@string/settings_entry_title"
             android:icon="@drawable/ic_outline_pan_tool_24"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
@@ -68,7 +68,7 @@
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE" android:value="true" />
         </service>
 
-        <activity android:name=".SettingsActivity"
+        <activity android:name=".settings.SettingsActivity"
             android:label="@string/settings_entry_title"
             android:description="@string/settings_entry_title"
             android:theme="@style/Theme.Settings"
@@ -92,8 +92,8 @@
         </activity>
 
         <provider
-            android:name=".SearchProvider"
-            android:authorities="org.protonaosp.elmyra.settings_search"
+            android:name=".settings.SearchProvider"
+            android:authorities="org.protonaosp.elmyra.settings.search"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"

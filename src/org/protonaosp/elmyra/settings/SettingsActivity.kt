@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package org.protonaosp.elmyra
+package org.protonaosp.elmyra.settings
 
 import android.app.Activity
 import android.content.Intent
@@ -23,6 +23,8 @@ import android.provider.Settings
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+
+import org.protonaosp.elmyra.R
 
 // Ugly, but there doesn't seem to be a better way
 private const val SEARCH_REQUEST_CODE = 501
