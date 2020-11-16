@@ -14,7 +14,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Active Edge Service</string>
 
     <!-- Pref keys -->
@@ -29,7 +29,8 @@
 
     <!-- Entry points in Settings -->
     <string name="settings_entry_title">Active Edge</string>
-    <string name="settings_entry_summary">Squeeze phone</string>
+    <string name="settings_entry_summary_on">On / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">Off</string>
     <string name="settings_search_keywords">Active Edge, squeeze, edge, gesture, assist, assistant</string>
 
     <!-- Items in Active Edge gesture settings -->

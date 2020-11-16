@@ -17,7 +17,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Entry points in Settings -->
     <string name="settings_entry_title">Active Edge</string>
-    <string name="settings_entry_summary">Gerät zusammendrücken</string>
     <string name="settings_search_keywords">Active Edge, Zusammendrücken, Rand, Geste, Assistent</string>
 
     <!-- Items in Active Edge gesture settings -->

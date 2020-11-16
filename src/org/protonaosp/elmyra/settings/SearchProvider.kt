@@ -33,7 +33,7 @@ class SearchProvider : SearchIndexablesProvider() {
         val ref = Array<Any?>(INDEXABLES_RAW_COLUMNS.size) { null }
         ref[COLUMN_INDEX_RAW_KEY] = context.getString(R.string.settings_entry_title)
         ref[COLUMN_INDEX_RAW_TITLE] = context.getString(R.string.settings_entry_title)
-        ref[COLUMN_INDEX_RAW_SUMMARY_ON] = context.getString(R.string.settings_entry_summary)
+        ref[COLUMN_INDEX_RAW_SUMMARY_ON] = context.getString(R.string.setting_enabled_summary)
         ref[COLUMN_INDEX_RAW_KEYWORDS] = context.getString(R.string.settings_search_keywords)
 
         // For breadcrumb generation

@@ -47,7 +47,7 @@ fun SharedPreferences.getSensitivity(context: Context): Int {
 }
 
 fun SharedPreferences.getActionName(context: Context): String {
-    val actionNames = resources.getStringArray(R.array.action_names)
-    val actionValues = resources.getStringArray(R.array.action_values)
-    return actionNames[actionValues.indexOf(getAction())]
+    val actionNames = context.resources.getStringArray(R.array.action_names)
+    val actionValues = context.resources.getStringArray(R.array.action_values)
+    return actionNames[actionValues.indexOf(getAction(context))]
 }

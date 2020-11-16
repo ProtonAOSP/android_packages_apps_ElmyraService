@@ -85,8 +85,10 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
 
-            <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.gestures" />
-            <meta-data android:name="com.android.settings.summary" android:resource="@string/settings_entry_summary" />
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.gestures" />
+            <meta-data android:name="com.android.settings.summary_uri"
+                android:value="content://org.protonaosp.elmyra.settings.summary/entry" />
             <!-- To make it appear at the top, like stock -->
             <meta-data android:name="com.android.settings.order" android:value="-100" />
         </activity>
@@ -102,6 +104,10 @@
                 <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
             </intent-filter>
         </provider>
+
+        <provider
+            android:name=".settings.SummaryProvider"
+            android:authorities="org.protonaosp.elmyra.settings.summary" />
 
     </application>
 
