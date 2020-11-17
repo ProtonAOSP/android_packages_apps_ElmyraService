@@ -17,6 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Entry points in Settings -->
     <string name="settings_entry_title">Active Edge</string>
+    <string name="settings_entry_summary_on">An / <xliff:g id="action">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">Aus</string>
     <string name="settings_search_keywords">Active Edge, Zusammendrücken, Rand, Geste, Assistent</string>
 
     <!-- Items in Active Edge gesture settings -->
