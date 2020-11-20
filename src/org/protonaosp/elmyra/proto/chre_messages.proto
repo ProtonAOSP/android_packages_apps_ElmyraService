@@ -23,7 +23,10 @@ message GestureProgress {
 }
 
 message GestureDetected {
+    // Was AP suspended when the gesture was finished?
+    // If so, we didn't get any progress events for this gesture
     bool host_suspended = 1;
+    // Did SLPI perform the vibration or does the AP need to do it?
     bool haptic_consumed = 2;
 }
 
