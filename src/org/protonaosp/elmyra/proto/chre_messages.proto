@@ -31,26 +31,50 @@ message GestureDetected {
 }
 
 enum MessageType {
+    // Dummy value to make protobuf happy
     UNDEFINED = 0;
 
-    // From AP HALs
+    /*
+     * From AP HALs
+     */
+
     NANOAPP_LOADED = 1;
+    // napp_header values loaded?
     NANOAPP_CONFIG = 100;
 
-    // AP -> SLPI
+    /*
+     * AP -> SLPI
+     */
+
+    // Enable gesture with specified sensitivity
     RECOGNIZER_START = 200;
+    // Disable gesture
     RECOGNIZER_STOP = 201;
+    // Set new sensitivity without restarting gesture
     SENSITIVITY_UPDATE = 202;
+    // For debugging: replies with recent raw sensor data
     SNAPSHOT_REQUEST = 203;
+    // For debugging: replies with sensor chassis calibration
     CHASSIS_REQUEST = 204;
+    // Abandoned grab gesture?
     GRAB_RECOGNIZER_START = 205;
+    // Abandoned grab gesture?
     GRAB_RECOGNIZER_STOP = 206;
 
-    // SLPI -> AP
+    /*
+     * SLPI -> AP
+     */
+
+    // Squeeze is in progress and above report threshold sent in RECOGNIZER_START
     GESTURE_PROGRESS = 300;
+    // Squeeze released (SLPI may or may not have vibrated)
     GESTURE_DETECTED = 301;
+    // Recent raw sensor data for debugging
     SNAPSHOT_RESPONSE = 302;
+    // Sensor calibration values for device chassis
     CHASSIS_RESPONSE = 303;
+    // Corresponds to GRAB_RECOGNIZER_START
     GRAB_DETECTED = 304;
+    // Corresponds to GRAB_RECOGNIZER_STOP
     GRAB_RELEASED = 305;
 }
