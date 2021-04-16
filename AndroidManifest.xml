@@ -91,6 +91,8 @@
                 android:value="content://org.protonaosp.elmyra.settings.summary/entry" />
             <!-- To make it appear at the top, like stock -->
             <meta-data android:name="com.android.settings.order" android:value="-100" />
+            <meta-data android:name="com.android.settings.profile"
+                android:value="primary_profile_only"/>
         </activity>
 
         <provider
