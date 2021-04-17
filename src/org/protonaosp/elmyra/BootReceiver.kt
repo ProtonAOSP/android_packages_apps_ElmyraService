@@ -19,11 +19,13 @@ package org.protonaosp.elmyra
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.UserManager
 
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         Intent(context ?: return, ElmyraService::class.java).also {
-            context.startService(it)
+            if (!UserManager.get(context).isManagedProfile())
+                context.startService(it)
         }
     }
 }
