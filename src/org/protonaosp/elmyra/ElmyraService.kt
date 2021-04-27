@@ -16,6 +16,7 @@
 
 package org.protonaosp.elmyra
 
+import android.app.IActivityManager
 import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -26,7 +27,9 @@ import android.hardware.location.ContextHubClient
 import android.hardware.location.ContextHubClientCallback
 import android.hardware.location.ContextHubManager
 import android.hardware.location.NanoAppMessage
+import android.os.ServiceManager
 import android.os.SystemClock
+import android.os.UserHandle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.util.Log
@@ -198,7 +201,9 @@ class ElmyraService : Service(), SharedPreferences.OnSharedPreferenceChangeListe
     private fun onGestureDetected(msg: ContextHubMessages.GestureDetected) {
         Log.i(TAG, "Gesture detected hostSuspended=${msg.hostSuspended} hapticConsumed=${msg.hapticConsumed}")
 
-        if (action.canRun()) {
+        if (action.canRun() && IActivityManager.Stub.asInterface(
+                        ServiceManager.getService(Context.ACTIVITY_SERVICE)).getCurrentUser().id ==
+                UserHandle.myUserId()) {
             if (!msg.hapticConsumed) {
                 vibrator.vibrate(vibEdgeRelease)
             }

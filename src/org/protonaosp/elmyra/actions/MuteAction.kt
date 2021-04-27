@@ -20,7 +20,6 @@ import android.content.Context
 import android.media.IAudioService
 import android.media.AudioManager
 import android.os.ServiceManager
-import android.os.UserHandle
 import android.provider.Settings
 import android.widget.Toast
 
@@ -31,9 +30,8 @@ class MuteAction(context: Context) : Action(context) {
 
     override fun run() {
         // We can't call AudioService#silenceRingerModeInternal from here, so this is a partial copy of it
-        var silenceRingerSetting = Settings.Secure.getIntForUser(context.contentResolver,
-                Settings.Secure.VOLUME_HUSH_GESTURE, Settings.Secure.VOLUME_HUSH_OFF,
-                UserHandle.USER_CURRENT)
+        var silenceRingerSetting = Settings.Secure.getInt(context.contentResolver,
+                Settings.Secure.VOLUME_HUSH_GESTURE, Settings.Secure.VOLUME_HUSH_OFF)
 
         var ringerMode: Int
         var toastText: Int
