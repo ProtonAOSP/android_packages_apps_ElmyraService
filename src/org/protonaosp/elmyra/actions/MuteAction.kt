@@ -17,15 +17,13 @@
 package org.protonaosp.elmyra.actions
 
 import android.content.Context
-import android.media.IAudioService
 import android.media.AudioManager
-import android.os.ServiceManager
 import android.os.UserHandle
 import android.provider.Settings
 import android.widget.Toast
 
 class MuteAction(context: Context) : Action(context) {
-    val service = IAudioService.Stub.asInterface(ServiceManager.getService(Context.AUDIO_SERVICE))
+    val service = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
 
     override fun canRun() = context.resources.getBoolean(com.android.internal.R.bool.config_volumeHushGestureEnabled)
 
@@ -49,7 +47,7 @@ class MuteAction(context: Context) : Action(context) {
             }
         }
 
-        service.setRingerModeInternal(ringerMode, "elmyra_hush")
+        service.setRingerModeInternal(ringerMode)
         Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show()
     }
 }
