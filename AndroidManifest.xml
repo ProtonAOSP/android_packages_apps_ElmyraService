@@ -38,17 +38,18 @@
     <application
         android:label="@string/app_name"
         android:allowBackup="false"
-        android:requiredForAllUsers="true"
         android:supportsRtl="true"
         android:persistent="true"
         android:directBootAware="true">
 
-        <!-- Core -->
+        <!-- Core (singleton) -->
 
         <service android:name=".ElmyraService"
+            android:singleUser="true"
             android:exported="false" />
 
-        <receiver android:name=".BootReceiver">
+        <receiver android:name=".BootReceiver"
+            android:singleUser="true">
             <intent-filter>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
@@ -91,6 +92,8 @@
                 android:value="content://org.protonaosp.elmyra.settings.summary/entry" />
             <!-- To make it appear at the top, like stock -->
             <meta-data android:name="com.android.settings.order" android:value="-100" />
+            <!-- Don't show in work profiles -->
+            <meta-data android:name="com.android.settings.profile" android:value="primary_profile_only" />
         </activity>
 
         <provider
