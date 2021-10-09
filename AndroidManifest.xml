@@ -49,7 +49,8 @@
             android:exported="false" />
 
         <receiver android:name=".BootReceiver"
-            android:singleUser="true">
+            android:singleUser="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
@@ -73,7 +74,8 @@
             android:label="@string/settings_entry_title"
             android:description="@string/settings_entry_title"
             android:theme="@style/Theme.Settings"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.INFO"/>
