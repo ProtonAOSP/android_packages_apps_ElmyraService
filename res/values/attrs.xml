@@ -19,5 +19,6 @@
     <declare-styleable name="LabeledSeekBarPreference">
         <attr name="textStart" format="reference" />
         <attr name="textEnd" format="reference" />
+        <attr name="tickMark" format="reference" />
     </declare-styleable>
 </resources>
