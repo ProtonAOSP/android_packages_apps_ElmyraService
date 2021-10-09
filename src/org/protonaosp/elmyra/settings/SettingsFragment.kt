@@ -18,7 +18,7 @@ package org.protonaosp.elmyra.settings
 
 import android.os.Bundle
 import android.content.SharedPreferences
-import androidx.preference.PreferenceFragment
+import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import androidx.preference.ListPreference
 import androidx.preference.SwitchPreference
@@ -33,10 +33,7 @@ import org.protonaosp.elmyra.getAction
 import org.protonaosp.elmyra.getActionName
 import org.protonaosp.elmyra.getAllowScreenOff
 
-// We need to use the "deprecated" PreferenceFragment to match Settings UI
-// AppCompat won't fully match the native device default settings theme
-@Suppress("DEPRECATION")
-class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPreferenceChangeListener {
+class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var prefs: SharedPreferences
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -48,7 +45,7 @@ class SettingsFragment : PreferenceFragment(), SharedPreferences.OnSharedPrefere
         preferenceManager.setStorageDeviceProtected()
         preferenceManager.sharedPreferencesName = PREFS_NAME
 
-        prefs = context.getDePrefs()
+        prefs = context!!.getDePrefs()
         prefs.registerOnSharedPreferenceChangeListener(this)
         updateUi()
     }
