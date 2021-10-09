@@ -23,6 +23,7 @@ import androidx.preference.PreferenceManager
 import androidx.preference.ListPreference
 import androidx.preference.SwitchPreference
 import com.android.settings.widget.LabeledSeekBarPreference
+import com.android.settings.widget.SeekBarPreference
 
 import org.protonaosp.elmyra.R
 import org.protonaosp.elmyra.getDePrefs
@@ -68,6 +69,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         // Sensitivity value
         findPreference<LabeledSeekBarPreference>(getString(R.string.pref_key_sensitivity))?.apply {
             progress = prefs.getSensitivity(context)
+            setHapticFeedbackMode(SeekBarPreference.HAPTIC_FEEDBACK_MODE_ON_TICKS)
         }
 
         // Action value and summary
