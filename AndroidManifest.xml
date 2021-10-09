@@ -73,7 +73,7 @@
         <activity android:name=".settings.SettingsActivity"
             android:label="@string/settings_entry_title"
             android:description="@string/settings_entry_title"
-            android:theme="@style/Theme.Settings"
+            android:theme="@style/Theme.SubSettingsBase"
             android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>
