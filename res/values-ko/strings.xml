@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Active Edge 서비스</string>
+    <string name="settings_entry_title">Active Edge</string>
+    <string name="settings_entry_summary_on">켜짐 / <xliff:g id="action" example="화면 캡처">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">꺼짐</string>
+    <string name="settings_search_keywords">Active Edge, 쥐기, 엣지, 제스처, 조수, 어시스턴트, 도움</string>
+    <string name="setting_enabled_title">기기 양쪽을 쥐어 작업 실행</string>
+    <string name="setting_enabled_summary">작업을 실행하려면 기기 양쪽의 아랫부분을 쥐었다 놓으세요.</string>
+    <string name="setting_sensitivity_title">민감도</string>
+    <string name="setting_sensitivity_light">가볍게 쥐기</string>
+    <string name="setting_sensitivity_firm">단단히 쥐기</string>
+    <string name="setting_screen_off_title">화면이 꺼져 있을 때 허용</string>
+    <string name="setting_screen_off_summary">잘못된 동작이 늘어날 수 있습니다.</string>
+    <string name="setting_screen_off_blocked_summary">이 행동으로 막힘</string>
+    <string name="setting_action_title">쥐었을 때</string>
+    <string name="action_screenshot_name">화면 캡처</string>
+    <string name="action_assistant_name">어시스턴트 열기</string>
+    <string name="action_camera_name">카메라 열기</string>
+    <string name="action_power_menu_name">전원 메뉴 열기</string>
+    <string name="action_mute_name">전화 및 알림 음소거</string>
+    <string name="action_flashlight_name">손전등 켜기/끄기</string>
+    <string name="action_screen_name">화면 켜기/끄기</string>
+</resources>

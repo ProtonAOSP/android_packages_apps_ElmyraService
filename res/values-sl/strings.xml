@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Storitev aktivnega roba</string>
+    <string name="settings_entry_title">Aktivni rob</string>
+    <string name="settings_entry_summary_on">Vklopljen / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">Izklopljen</string>
+    <string name="settings_search_keywords">Aktivni rob, stisk, rob, poteza, pomoč, pomočnik</string>
+    <string name="setting_enabled_title">Stisnite telefon za izvedbo dejanja</string>
+    <string name="setting_enabled_summary">Za izvedbo dejanja, stisnite in izpustite stranici telefona blizu dna</string>
+    <string name="setting_sensitivity_title">Občutljivost</string>
+    <string name="setting_sensitivity_light">Nežen stisk</string>
+    <string name="setting_sensitivity_firm">Čvrst stisk</string>
+    <string name="setting_screen_off_title">Dovoli, ko je zaslon izklopljen</string>
+    <string name="setting_screen_off_summary">Lahko poveča lažne sprožitve</string>
+    <string name="setting_screen_off_blocked_summary">Blokirano s trenutnim dejanjem</string>
+    <string name="setting_action_title">Ob stisku</string>
+    <string name="action_screenshot_name">Zajemi zaslonsko sliko</string>
+    <string name="action_assistant_name">Odpri pomočnika</string>
+    <string name="action_camera_name">Odpri fotoaparat</string>
+    <string name="action_power_menu_name">Odpri meni izklopa</string>
+    <string name="action_mute_name">Utišaj klice in obvestila</string>
+    <string name="action_flashlight_name">Vklopi/izklopi svetilko</string>
+    <string name="action_screen_name">Vklopi/izklopi zaslon</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Active Edge Service</string>
+    <string name="settings_entry_title">Active Edge</string>
+    <string name="settings_entry_summary_on">On / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">Off</string>
+    <string name="settings_search_keywords">Active Edge, squeeze, edge, gesture, assist, assistant</string>
+    <string name="setting_enabled_title">Squeeze phone to perform action</string>
+    <string name="setting_enabled_summary">To perform an action, squeeze and release the sides of your phone near the bottom</string>
+    <string name="setting_sensitivity_title">Sensitivity</string>
+    <string name="setting_sensitivity_light">Light squeeze</string>
+    <string name="setting_sensitivity_firm">Firm squeeze</string>
+    <string name="setting_screen_off_title">Allow when screen is off</string>
+    <string name="setting_screen_off_summary">May increase false triggers</string>
+    <string name="setting_screen_off_blocked_summary">Blocked by current action</string>
+    <string name="setting_action_title">On squeeze</string>
+    <string name="action_screenshot_name">Take screenshot</string>
+    <string name="action_assistant_name">Open assistant</string>
+    <string name="action_camera_name">Open camera</string>
+    <string name="action_power_menu_name">Open power menu</string>
+    <string name="action_mute_name">Mute calls and notifications</string>
+    <string name="action_flashlight_name">Turn torch on/off</string>
+    <string name="action_screen_name">Turn screen on/off</string>
+</resources>

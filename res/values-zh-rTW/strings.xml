@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">活動邊緣服務</string>
+    <string name="settings_entry_title">活動邊緣</string>
+    <string name="settings_entry_summary_on">開啟/<xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">關閉</string>
+    <string name="settings_search_keywords">活動邊緣、擠壓、邊緣、手勢、輔助、助理</string>
+    <string name="setting_enabled_title">擠壓手機執行動作</string>
+    <string name="setting_enabled_summary">執行動作, 擠壓並釋放近手機底部兩邊</string>
+    <string name="setting_sensitivity_title">靈敏度</string>
+    <string name="setting_sensitivity_light">輕壓</string>
+    <string name="setting_sensitivity_firm">硬壓</string>
+    <string name="setting_screen_off_title">當螢幕關閉時允許</string>
+    <string name="setting_screen_off_summary">可能會增加誤觸</string>
+    <string name="setting_screen_off_blocked_summary">被當前動作阻止</string>
+    <string name="setting_action_title">擠壓時</string>
+    <string name="action_screenshot_name">螢幕擷取畫面</string>
+    <string name="action_assistant_name">開啟助理</string>
+    <string name="action_camera_name">開啟相機</string>
+    <string name="action_power_menu_name">開啟電源選單</string>
+    <string name="action_mute_name">靜音通話和通知</string>
+    <string name="action_flashlight_name">開啟/關閉手電筒</string>
+    <string name="action_screen_name">開啟/關閉螢幕</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Aktiv Edge Xidməti</string>
+    <string name="settings_entry_title">Aktiv Edge</string>
+    <string name="settings_entry_summary_on">Açıq / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">Bağlı</string>
+    <string name="settings_search_keywords">Aktiv Edge, sıxma, künc, jest, kömək, köməkçi</string>
+    <string name="setting_enabled_title">Əməliyyatı icra etmək üçün telefonu sıxın</string>
+    <string name="setting_enabled_summary">Bir əməliyyat icra etmək üçün telefonun aşağı hissəsinin kənarlarını sıxıb buraxın</string>
+    <string name="setting_sensitivity_title">Həssaslıq</string>
+    <string name="setting_sensitivity_light">Yüngül sıxma</string>
+    <string name="setting_sensitivity_firm">Möhkəm sıxma</string>
+    <string name="setting_screen_off_title">Ekran sönülü olanda icazə ver</string>
+    <string name="setting_screen_off_summary">Yanlış tətikləyiciləri artıra bilər</string>
+    <string name="setting_screen_off_blocked_summary">Hazırkı əməliyyat tərəfindən əngəlləndi</string>
+    <string name="setting_action_title">Sıxanda</string>
+    <string name="action_screenshot_name">Ekran şəklini çək</string>
+    <string name="action_assistant_name">Köməkçini aç</string>
+    <string name="action_camera_name">Kameranı aç</string>
+    <string name="action_power_menu_name">Güc menyusunu aç</string>
+    <string name="action_mute_name">Zəngləri və bildirişləri səssizə al</string>
+    <string name="action_flashlight_name">Fənəri yandır/söndür</string>
+    <string name="action_screen_name">Ekranı aç/bağla</string>
+</resources>

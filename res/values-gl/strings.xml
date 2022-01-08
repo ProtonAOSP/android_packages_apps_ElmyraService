@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Servizo de marxe activa</string>
+    <string name="settings_entry_title">Marxe activa</string>
+    <string name="settings_entry_summary_on">Activado / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">Desactivado</string>
+    <string name="settings_search_keywords">Marxe activa, premer, marxe, xesto, asistencia, asistente</string>
+    <string name="setting_enabled_title">Premer no teléfono para realizar unha acción</string>
+    <string name="setting_enabled_summary">Para realizar unha acción, preme e solta os lados da parte inferior do teléfono</string>
+    <string name="setting_sensitivity_title">Sensibilidade</string>
+    <string name="setting_sensitivity_light">Presión leve</string>
+    <string name="setting_sensitivity_firm">Presión firme</string>
+    <string name="setting_screen_off_title">Permitir coa pantalla apagada</string>
+    <string name="setting_screen_off_summary">Pode causar activacións accidentais</string>
+    <string name="setting_screen_off_blocked_summary">Bloqueado pola acción actual</string>
+    <string name="setting_action_title">Ao premer</string>
+    <string name="action_screenshot_name">Capturar pantalla</string>
+    <string name="action_assistant_name">Abrir asistente</string>
+    <string name="action_camera_name">Abrir cámara</string>
+    <string name="action_power_menu_name">Abrir menú de activar/desactivar</string>
+    <string name="action_mute_name">Silenciar chamadas e notificacións</string>
+    <string name="action_flashlight_name">Lanterna encendida/apagada</string>
+    <string name="action_screen_name">Pantalla encendida/apagada</string>
+</resources>

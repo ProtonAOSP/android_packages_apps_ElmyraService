@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">সক্রিয় এজ সার্ভিস</string>
+    <string name="settings_entry_title">সক্রিয় এজ</string>
+    <string name="settings_entry_summary_on">চালু / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
+    <string name="settings_entry_summary_off">বন্ধ</string>
+    <string name="settings_search_keywords">সক্রিয় এজ, স্কুইজ, এজ, জেসচার, অ্যাসিস্ট, অ্যাসিস্ট্যান্ট</string>
+    <string name="setting_enabled_title">ক্রিয়া সম্পাদনের জন্য ফোন স্কুইজ করুন</string>
+    <string name="setting_enabled_summary">ক্রিয়া সম্পাদনের জন্য ফোনের নিচের অংশে স্কুইজ করে ছেড়ে দিন</string>
+    <string name="setting_sensitivity_title">সেনসিটিভিটি</string>
+    <string name="setting_sensitivity_light">হালকা স্কুইজ</string>
+    <string name="setting_sensitivity_firm">দৃঢ় স্কুইজ</string>
+    <string name="setting_screen_off_title">স্ক্রিন বন্ধ অবস্থায় অনুমতি দেন</string>
+    <string name="setting_screen_off_summary">ভুলে চালু হওয়ার প্রবণতা বেড়ে যেতে পারে</string>
+    <string name="setting_screen_off_blocked_summary">বর্তমান কার্যক্রমে ব্লক করা হয়েছে</string>
+    <string name="setting_action_title">স্কুইজ করলে</string>
+    <string name="action_screenshot_name">স্ক্রীনশট নিন</string>
+    <string name="action_assistant_name">অ্যাসিস্ট্যান্ট খুলুন</string>
+    <string name="action_camera_name">ক্যামেরা খুলুন</string>
+    <string name="action_power_menu_name">পাওয়ার মেনু খুলুন</string>
+    <string name="action_mute_name">কল এবং বিজ্ঞপ্তি মিউট করুন</string>
+    <string name="action_flashlight_name">ফ্ল্যাশলাইট অন/অফ করুন</string>
+    <string name="action_screen_name">স্ক্রীন অন/অফ করুন</string>
+</resources>
