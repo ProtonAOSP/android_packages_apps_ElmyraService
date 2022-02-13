@@ -15,18 +15,19 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Serviciu de berbesu activu</string>
-    <string name="settings_entry_title">Berbesu activu</string>
+    <string name="app_name">Serviciu «Active Edge»</string>
+    <string name="settings_entry_title">Active Edge</string>
     <string name="settings_entry_summary_on">Sí / <xliff:g id="action" example="Take screenshot">%1$s</xliff:g></string>
     <string name="settings_entry_summary_off">Non</string>
-    <string name="settings_search_keywords">Berbesu activu, Active Edge, berbesu, xestu, asistente, asistir, apertar, apertamientu</string>
+    <string name="settings_search_keywords">Active Edge, berbesu, xestu, asistente, asistir, apertar, apertamientu, presión</string>
     <string name="setting_enabled_title">Apertar el teléfonu pa facer una aición</string>
     <string name="setting_enabled_summary">Pa facer dalguna aición, apierta y suelta los berbesos del teléfonu cierca de la parte baxera</string>
     <string name="setting_sensitivity_title">Sensibilidá</string>
-    <string name="setting_sensitivity_light">Apertamientu suave</string>
-    <string name="setting_sensitivity_firm">Apertamientu firme</string>
+    <string name="setting_sensitivity_light">Presión llixera</string>
+    <string name="setting_sensitivity_firm">Presión fuerte</string>
     <string name="setting_screen_off_title">Permitir cola pantalla apagada</string>
     <string name="setting_screen_off_summary">Pue aumentar les aiciones accidentales</string>
+    <string name="setting_screen_off_blocked_summary">L\'aición actual bloquia la opción</string>
     <string name="setting_action_title">Al apertar</string>
     <string name="action_screenshot_name">Facer una captura de pantalla</string>
     <string name="action_assistant_name">Abrir l\'asistente</string>
